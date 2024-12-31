@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .button-section {
+            padding: 15px;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .button-section h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        input[type="button"] {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+      
+    </style>
+    <script>
+        function changeStatus() {
+            document.getElementById("status").innerText = "Mouse has touched the button";
+        }
+        function webpage(){
+            window.location="https://www.uskt.edu.pk/";
+        }
+        function changecolor(){
+            window.document.bgColor="lightblue";
+        }
+        function bg(){
+            
+            oldColor=window.document.bgColor;
+            window.alert("The old color was "+ oldColor);
+        }
+        function newwindow(){
+            window.open("https://www.uskt.edu.pk/");
+        }
+    </script>
+</head>
+<body>
+    <h1>Interactive Button Demo</h1>
+
+    <div class="button-container">
+        <div class="button-section">
+            <h2>1. Change Status</h2>
+            <input type="button" value="Change Status" onMouseOver="changeStatus()">
+            <p id="status"></p>
+        </div>
+
+        <div class="button-section">
+            <h2>2. Go to Webpage</h2>
+            <input type="button" value="Go to USKT Website" onMouseOver="webpage()">
+        </div>
+
+        <div class="button-section">
+            <h2>3. Change Background Color</h2>
+            <input type="button" value="Change Color to Light Blue" onMouseOver="changecolor()">
+        </div>
+
+        <div class="button-section">
+            <h2>4. Alert Old Color</h2>
+            <input type="button" value="Show Old Color" onMouseOver="bg()">
+        </div>
+
+        <div class="button-section">
+            <h2>5. Open New Window</h2>
+            <input type="button" value="Open USKT in New Window" onclick="newwindow()">
+        </div>
+    </div>
+</body>
+</html>
